@@ -1,0 +1,131 @@
+/* styles.css */
+
+/* Font Styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: #f4f4f4;
+    background-image: url(background.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+header {
+    background-color: #001715;
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+section {
+    background-color: #9AC2B8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #d3634a;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.headings {
+    font-weight: bold;
+    font-size: 30px;
+    color: #333;
+}
+
+/* Updated navigation menu styles */
+.navbar {
+    background-color:transparent; /* Background color for the navigation menu */
+    position: sticky; /* Stick the navigation menu to the top of the viewport */
+    top: 0; /* Position it at the top */
+    z-index: 1; /* Ensure it's on top of other content */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0; /* Remove default list padding */
+    text-align: center; /* Center-align the menu items */
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Style the navigation links */
+.navbar a {
+    font-weight: bold;
+    font-size: 24px;
+    color: #013b34; /* Default text color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Change link color on hover */
+.navbar a:hover {
+    color: #cd7d6b; /* Hover text color */
+    background-color: #e6e5e3; /* Hover background color */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery figure {
+    text-align: center;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
