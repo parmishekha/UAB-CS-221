@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(238, 226, 203); 
+    border-bottom: 5px solid #232020; 
+    color: #000000; 
+    padding: 1em; 
+}
+
+
+main {
+    width: 80%; 
+    margin: 0 auto; 
+    background-color: rgb(234, 201, 234); 
+    color: #000000; 
+    padding: 1em; 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    background-color: rgb(187, 187, 246); 
+    color: #000000;
+    padding: 1em; 
+}
