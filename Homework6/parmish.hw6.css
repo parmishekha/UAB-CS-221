@@ -1,0 +1,83 @@
+/* Add global styles for better layout consistency */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Create a flex container with background color */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Background color for the entire viewport */
+    overflow: hidden;
+}
+
+/* Style individual grid items with rounded corners and other effects */
+.grid-item {
+    flex: 0 0 calc(33.3333% - 20px); /* Each grid item takes up 33.3333% of the container width with a small gap */
+    margin: 10px; /* Add a small margin between grid items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+    border: 2px solid black;
+    aspect-ratio: 1;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow for a subtle effect */
+    transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+}
+
+/* Add background colors for individual grid items */
+.grid-item:nth-child(1) {
+    background-color: #e74c3c;
+    grid-column: span 2; /* Make the first grid item span two columns */
+    grid-row: span 2; /* Span two rows */
+}
+
+.grid-item:nth-child(2) {
+    background-color: #f1c40f;
+}
+
+.grid-item:nth-child(3) {
+    background-color: #2ecc71;
+}
+
+.grid-item:nth-child(4) {
+    background-color: #9b59b6;
+}
+
+.grid-item:nth-child(5) {
+    background-color: #3498db;
+}
+
+.grid-item:nth-child(6) {
+    background-color: #e67e22;
+}
+
+.grid-item:nth-child(7),
+.grid-item:nth-child(8) {
+    flex: 0 0 calc(50% - 20px); /* Two items in a row, each spanning 50% width */
+}
+
+.grid-item:nth-child(7) {
+    background-color: #1abc9c;
+}
+
+.grid-item:nth-child(8) {
+    background-color: #34495e;
+}
+
+.grid-item:nth-child(9) {
+    background-color: #657a80;
+    flex: 0 0 calc(100% - 20px); /* Span the entire width of the grid */
+    grid-column: span 3; /* Make the ninth grid item span all three columns */
+    grid-row: span 1; /* Span one row */
+}
