@@ -1,14 +1,26 @@
-/* styles.css */
 
-/* Font Styles */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
+.centered {
+    text-align: center;
+    margin-top: 10px;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.logo img {
 
-/* Updated header styles */
-header {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}header {
     background-color: #001715;
     padding: 20px;
     border-radius: 10px;
@@ -111,7 +123,6 @@ section {
     margin-bottom: 5px;
 }
 
-/* Typography and Colors (Example) */
 h1 {
     font-size: 36px;
     font-weight: bold;
