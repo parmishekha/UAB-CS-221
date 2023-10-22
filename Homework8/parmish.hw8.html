@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Reward System</title>
+    <style>
+        body {
+            background-color: #a67777;
+        }
+    </style>
+    <script>
+        function rewardStudent() {
+            const gradeInput = prompt("Enter the student's numeric grade:");
+            const grade = Number(gradeInput); 
+            
+            if (isNaN(grade) || grade < 0 || grade > 100) {
+                console.error("Invalid input. Please enter a valid numeric grade between 0 and 100.");
+                return;
+            }
+            
+            let letterGrade;
+            let reward;
+
+            if (grade >= 90) {
+                letterGrade = 'A';
+                reward = 'Candy';
+            } else if (grade >= 80) {
+                letterGrade = 'B';
+                reward = 'Apple';
+            } else if (grade >= 70) {
+                letterGrade = 'C';
+                reward = 'Mint';
+            } else if (grade >= 60) {
+                letterGrade = 'D';
+                reward = 'Pencil';
+            } else {
+                letterGrade = 'F';
+                reward = 'Awkward conversation with parents';
+            }
+
+            console.log(`Grade: ${grade}\nLetter Grade: ${letterGrade}\nReward: ${reward}`);
+        }
+    </script>
+</head>
+<body onload="rewardStudent()">
+</body>
+</html>
