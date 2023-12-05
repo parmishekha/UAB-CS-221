@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker - Log Workout</title>
+    <link rel="stylesheet" href="fp.css">
+    <style>
+        html, body {
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+      
+
+        main {
+            flex: 1; /* Allow main to grow and fill available space */
+            overflow-y: auto; /* Enable vertical scrolling within main if needed */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0; /* Add some padding */
+            background-color: #333; /* Example background color */
+            color: white; /* Example text color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker</h1>
+        <nav>
+            <ul>
+                <!--<li><a href="index.html">Home</a></li> -->
+                <li><a href="workouts.html">Log Workout</a></li>
+                <li><a href="nutrition.html">Track Nutrition</a></li>
+                <li><a href="goals.html">Set Goals</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+<main>
+    <section id="logWorkout">
+        <h2>Log Your Workout</h2>
+        <select id="workoutType">
+            <!-- Add workout options here -->
+            <option value="Back Squat">Back Squat</option>
+            <option value="Push Ups">Push Ups</option>
+            <option value="Front Squat">Front Squat</option>
+            <option value="Box Squat">Box Squat</option>
+            <option value="Barbell Split Squat">Barbell Split Squat</option>
+            <option value="The Goblet Squat">The Goblet Squat</option>
+            <option value="Front Rack Reverse Lunge">Front Rack Reverse Lunge</option>
+            <option value="Bulgarian Split Squat">Bulgarian Split Squat</option>
+            <option value="Pistols">Pistols</option>
+            <option value="Step Ups">Step Ups</option>
+            <option value="Thrusters">Thrusters</option>
+            <option value="Wall Sits">Wall Sits</option>
+            <option value="Conventional Barbell Deadlift">Conventional Barbell Deadlift</option>
+            <option value="Sumo Deadlift">Sumo Deadlift</option>
+            <option value="Romanian Deadlift">Romanian Deadlift</option>
+            <option value="Trap Bar Deadlift">Trap Bar Deadlift</option>
+            <option value="Goodmorning">Goodmorning</option>
+            <option value="Dumbbell RDL">Dumbbell RDL</option>
+            <option value="Barbell Row">Barbell Row</option>
+            <option value="Face Pulls">Face Pulls</option>
+            <option value="Leg Raises">Leg Raise</option>
+            <option value="Reverse Crunch">Reverse Crunch</option>
+            <option value="Side Planks">Side Planks</option>
+            <option value="Horizontal Pull-ups">Horizontal Pull-ups</option>
+            <option value="Lat Pulldowns">Lat Pulldowns</option>
+        </select>
+        <input type="number" id="workoutCount" placeholder="Enter count">
+        <button onclick="logWorkout()">Log Workout</button>
+        <div id="workoutLog"></div>
+    </section>
+</main>
+    <footer>
+        <p>&copy; 2023 Fitness Tracker</p>
+    </footer>
+    <script src="fp.js"></script>
+</body>
+</html>

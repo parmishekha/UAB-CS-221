@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker - Set Goals</title>
+    <link rel="stylesheet" href="fp.css">
+    <style>
+        /* Add CSS to ensure footer is always at the bottom */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Full height */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Minimum height as viewport height */
+        }
+        main {
+            flex: 1; /* Allows main content to expand */
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed; /* Fix the footer to the bottom */
+            width: 100%; /* Full width */
+            bottom: 0; /* Position at the bottom */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker</h1>
+        <nav>
+            <ul>
+                <!--<li><a href="index.html">Home</a></li> -->
+                <li><a href="workouts.html">Log Workout</a></li>
+                <li><a href="nutrition.html">Track Nutrition</a></li>
+                <li><a href="goals.html">Set Goals</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+    <main>
+        <section id="setGoals">
+            <h2>Set Your Goals</h2>
+            <form id="goalForm">
+            <select id="goalType" class="goal-selector">
+                <option value="60_sec_plank">Hold a high plank for 60 seconds</option>
+                <option value="new_exercise_weekly">Try a new class/exercise once a week</option>
+                <option value="Strength training three times a week">Complete strength training three times a week</option>
+                <option value="Run 5K without stopping">Complete a 5K Run without stopping</option>
+                <option value="Grow stronger glutes">Grow stronger glutes</option>
+                <option value="Build stronger core">Build stronger core</option>
+                <option value="Boost cardio endurance">Boost cardio endurance</option>
+                <option value="Increase flexbility">Increase flexbility</option>
+                <option value="10k_run">Complete a 10K Run</option>
+                <option value="daily_meditation">Daily 10-minute meditation</option>
+                <option value="daily_steps">Reach 10,000 steps daily</option>
+                <option value="yoga_sessions">Attend two yoga sessions per week</option>
+                <option value="hydration_goal">Drink 3 liters of water daily</option>
+                <option value="sleep_routine">Establish a consistent sleep routine</option>
+                <!-- Add more goals here -->
+            </select>
+            <button onclick="setGoals()">Set Goal</button>
+        </form>
+            <div id="goalDisplay" class="goal-display"></div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Fitness Tracker</p>
+    </footer>
+
+    <script src="fp.js"></script>
+</body>
+</html>

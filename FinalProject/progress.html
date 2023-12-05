@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker - Progress</title>
+    <link rel="stylesheet" href="fp.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <style>
+        html, body {
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Viewport height */
+            overflow: hidden; /* Disable scrolling */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            background-image: url('image.jpeg');
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-attachment: fixed; /* Fixed background */
+        }
+
+
+        main {
+            flex: 1; /* Allow main to grow and fill available space */
+            overflow: auto; /* Enable scrolling within main if needed */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0; /* Add some padding */
+            background-color: #333; /* Example background color */
+            color: white; /* Example text color */
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker</h1>
+        <nav>
+            <ul>
+                <!--<li><a href="Index.html">Home</a></li> -->
+                <li><a href="Workouts.html">Log Workout</a></li>
+                <li><a href="Nutrition.html">Track Nutrition</a></li>
+                <li><a href="Goals.html">Set Goals</a></li>
+                <li><a href="Progress.html">Progress</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="progress">
+            <h2>Your Weekly Progress</h2>
+
+            <canvas id="progressChart" width="400" height="400"></canvas> <!-- Canvas for the chart -->
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Fitness Tracker</p>
+    </footer>
+    
+    <script src="fp.js"></script>
+    <script>
+        // This would be your Chart.js code to render the bar graph.
+        // For simplicity, I'm using static data. You would replace this with dynamic data fetched from your back-end.
+        
+        const data = {
+            labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            datasets: [{
+                label: 'Calories Consumed',
+                data: [1200, 1500, 1300, 1400, 1600, 1700, 1800], // Replace with dynamic data
+                backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                borderColor: 'rgba(0, 123, 255, 1)',
+                borderWidth: 1
+            }, {
+                label: 'Calories Burnt',
+                data: [300, 400, 350, 500, 450, 600, 550], // Replace with dynamic data
+                backgroundColor: 'rgba(40, 167, 69, 0.5)',
+                borderColor: 'rgba(40, 167, 69, 1)',
+                borderWidth: 1
+            }]
+        };
+        
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        
+        new Chart(
+            document.getElementById('progressChart'),
+            config
+        );
+    
+    </script>
+</body>
+</html>
